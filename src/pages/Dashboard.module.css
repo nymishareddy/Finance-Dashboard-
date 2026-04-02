@@ -1,0 +1,113 @@
+.page { padding: 28px; }
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.panel {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.panelTitle { font-size: 14px; font-weight: 600; color: var(--text); }
+.panelSub   { font-size: 12px; color: var(--text3); margin-top: 2px; }
+
+.periodTabs { display: flex; gap: 4px; }
+.periodTab {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text3);
+  border: none;
+  background: transparent;
+  transition: all var(--transition);
+  font-family: var(--font-body);
+}
+.periodTab:hover:not(.active) { color: var(--text2); }
+.periodTab.active { background: var(--bg4); color: var(--text); }
+
+.chartLegend {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text2);
+}
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.chartWrap {
+  position: relative;
+  height: 220px;
+}
+
+.donutWrap {
+  position: relative;
+  height: 160px;
+  max-width: 180px;
+  margin: 0 auto 16px;
+}
+
+.donutLegend { display: flex; flex-direction: column; gap: 7px; }
+.donutLegendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+.donutDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.donutName { flex: 1; color: var(--text2); }
+.donutPct  { color: var(--text3); font-family: var(--font-mono); font-size: 11px; }
+.donutAmt  { color: var(--text); font-family: var(--font-mono); font-size: 12px; font-weight: 500; }
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+@media (max-width: 1100px) {
+  .summaryGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 860px) {
+  .chartsGrid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .page { padding: 16px; }
+  .summaryGrid { grid-template-columns: 1fr 1fr; gap: 10px; }
+}

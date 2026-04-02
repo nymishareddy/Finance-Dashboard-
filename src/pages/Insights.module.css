@@ -1,0 +1,107 @@
+.page { padding: 28px; }
+
+.insightGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.insightCard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  transition: border-color var(--transition);
+}
+.insightCard:hover { border-color: var(--border2); }
+
+.insightTag {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.insightTag.warning { color: var(--amber); }
+.insightTag.info    { color: var(--blue); }
+.insightTag.success { color: var(--green); }
+
+.insightValue {
+  font-family: var(--font-display);
+  font-size: 30px;
+  color: var(--text);
+  line-height: 1.1;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.insightDesc {
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.55;
+}
+.insightDesc strong { color: var(--text); font-weight: 600; }
+
+.progressBar {
+  height: 4px;
+  background: var(--bg4);
+  border-radius: 2px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+.progressFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 14px;
+}
+
+.panel {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  gap: 12px;
+}
+.panelTitle { font-size: 14px; font-weight: 600; color: var(--text); }
+.panelSub   { font-size: 12px; color: var(--text3); margin-top: 2px; }
+
+.chartLegend { display: flex; gap: 12px; flex-shrink: 0; }
+.legendItem  { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--text2); }
+.legendDot   { width: 8px; height: 8px; border-radius: 2px; }
+
+.observationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.observation {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.obsIcon  { font-size: 20px; flex-shrink: 0; }
+.obsTitle { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.obsDesc  { font-size: 12px; color: var(--text2); line-height: 1.5; }
+
+@media (max-width: 900px) {
+  .insightGrid { grid-template-columns: 1fr 1fr; }
+  .chartsGrid  { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .page        { padding: 16px; }
+  .insightGrid { grid-template-columns: 1fr; }
+}
