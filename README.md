@@ -34,6 +34,8 @@ A clean, interactive personal finance dashboard built with React. Track your inc
 - **Monthly grouped bar chart** — 6-month income vs expense comparison
 - **Horizontal category bar chart** — ranked expense categories
 - **Key observations panel** — 4 auto-generated insights from the data
+- **🤖 AI Expense Insights** — Get personalized spending summaries, unnecessary expense detection, and saving tips powered by Google Gemini AI.
+- **💰 AI Budget Planner** — Enter your total budget to get an AI-generated, category-wise budget split.
 
 ### Role-Based UI
 Switch between **Admin** and **Viewer** using the role selector in the sidebar:
@@ -64,7 +66,8 @@ Switch between **Admin** and **Viewer** using the role selector in the sidebar:
 | Charts         | Chart.js + react-chartjs-2      |
 | Styling        | CSS Modules                     |
 | Persistence    | localStorage                    |
-| Fonts          | DM Serif Display, Outfit, DM Mono (Google Fonts) |
+| Fonts          | DM Serif Display, Outfit, DM Mono |
+| AI Integration | Google Gemini API (2.5-flash)   |
 
 ---
 

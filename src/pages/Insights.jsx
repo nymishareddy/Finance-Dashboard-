@@ -27,7 +27,8 @@ export default function Insights() {
   const [budgetPlan, setBudgetPlan] = useState('');
   const [loadingBudget, setLoadingBudget] = useState(false);
 
-  const API_KEY = "AIzaSyBvMeqKSgBLWolFs0ljFLWUHB7liBoPoBo";
+  // Read the API key from the .env file
+  const API_KEY = process.env.REACT_APP_GEMINI_API_KEY;
   const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
 
   async function handleGetInsights() {
