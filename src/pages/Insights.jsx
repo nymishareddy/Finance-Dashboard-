@@ -90,6 +90,7 @@ export default function Insights() {
     }
   }
 
+ 
   const summary      = computeSummary(transactions);
   const catBreakdown = getCategoryBreakdown(transactions);
   const topCat       = catBreakdown[0];
@@ -389,7 +390,6 @@ export default function Insights() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }
