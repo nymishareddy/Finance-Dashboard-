@@ -1,4 +1,4 @@
-# Nym.track — Finance Dashboard
+# Nym.track — Finance Dashboard (BudgetMind AI)
 
 A clean, interactive personal finance dashboard built with React. Track your income, expenses, and spending patterns with a polished dark-mode UI.
 
